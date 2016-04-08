@@ -419,6 +419,7 @@
     <Compile Include="XUtils.Threading.Base.Internal\ISTPInstancePerformanceCounters.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\LocalSTPInstancePerformanceCounters.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\NullSTPInstancePerformanceCounters.cs" />
+    <Compile Include="XUtils.Threading.Base.Internal\PriorityQueue.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\Stopwatch.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\STPEventWaitHandle.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\STPInstanceNullPerformanceCounter.cs" />
@@ -431,6 +432,7 @@
     <Compile Include="XUtils.Threading.Base.Internal\WorkItem.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\WorkItemFactory.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\WorkItemResultTWrapper.cs" />
+    <Compile Include="XUtils.Threading.Base.Internal\WorkItemsGroup.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\WorkItemsGroupBase.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\WorkItemsQueue.cs" />
     <Compile Include="XUtils.Threading.Base.Internal\WorkItemStateCallback.cs" />
@@ -442,6 +444,7 @@
     <Compile Include="XUtils.Threading.Base\IWorkItemResult.cs" />
     <Compile Include="XUtils.Threading.Base\IWorkItemsGroup.cs" />
     <Compile Include="XUtils.Threading.Base\PostExecuteWorkItemCallback.cs" />
+    <Compile Include="XUtils.Threading.Base\SmartThreadPool.cs" />
     <Compile Include="XUtils.Threading.Base\STPStartInfo.cs" />
     <Compile Include="XUtils.Threading.Base\ThreadInitializationHandler.cs" />
     <Compile Include="XUtils.Threading.Base\ThreadTerminationHandler.cs" />

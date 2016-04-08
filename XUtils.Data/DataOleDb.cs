@@ -29,7 +29,7 @@ namespace XUtils.Data
 		{
 			if (parameterName.IndexOf("@") == -1)
 			{
-				"@" + parameterName;
+                parameterName="@" + parameterName;
 			}
 			return parameterName;
 		}

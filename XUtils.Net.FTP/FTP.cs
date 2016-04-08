@@ -3136,9 +3136,9 @@ namespace XUtils.Net.FTP
 				this.USER(username, ref this.iostream);
 				this.PASS(password, ref this.iostream);
 			}
-			catch (_530_not_logged_exception 530_not_logged_exception)
+			catch (_530_not_logged_exception not_logged_exception)
 			{
-				this.OnServerResponse(530_not_logged_exception.Message);
+				this.OnServerResponse(not_logged_exception.Message);
 				this.OnReConnect(this);
 				bool result = false;
 				return result;
@@ -4187,12 +4187,12 @@ namespace XUtils.Net.FTP
 				stringBuilder.AppendFormat("|{2}|{0}|{1}|", Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString(), ((IPEndPoint)this.ftp.Client.LocalEndPoint).Port + 1, (int)prt);
 				this.EPRT(stringBuilder.ToString(), ref this.iostream);
 			}
-			catch (_522_protocol_not_supported 522_protocol_not_supported)
+			catch (_522_protocol_not_supported  protocol_not_supported)
 			{
 				notSupportedProtocols.Add((int)prt);
-				this.OnServerResponse(522_protocol_not_supported.Message);
+				this.OnServerResponse(protocol_not_supported.Message);
 				Regex regex = new Regex("\\((?<prt>.*)\\)");
-				Match match = regex.Match(522_protocol_not_supported.Message);
+				Match match = regex.Match(protocol_not_supported.Message);
 				if (match.Success)
 				{
 					string[] array = match.Groups["prt"].Value.Replace("(", "").Replace(")", "").Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);

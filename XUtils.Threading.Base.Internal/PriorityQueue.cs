@@ -85,7 +85,7 @@ namespace XUtils.Threading.Base.Internal
 		}
 		public void Enqueue(IHasWorkItemPriority workItem)
 		{
-			int num = (WorkItemPriority)5 - workItem.WorkItemPriority - WorkItemPriority.BelowNormal;
+			int num = 5 - (int)workItem.WorkItemPriority - (int)WorkItemPriority.BelowNormal;
 			this._queues[num].AddLast(workItem);
 			this._workItemsCount++;
 			this._version++;

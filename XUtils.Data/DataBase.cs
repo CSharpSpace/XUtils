@@ -1367,7 +1367,7 @@ namespace XUtils.Data
 			{
 				throw new ArgumentNullException("spName");
 			}
-			connection.ConnectionString + ":" + spName + (includeReturnValueParameter ? ":include ReturnValue Parameter" : "");
+            connection.ConnectionString = connection.ConnectionString + ":" + spName + (includeReturnValueParameter ? ":include ReturnValue Parameter" : "");
 			IDataParameter[] array = ADOHelperParameterCache.GetCachedParameterSet(connection.ConnectionString, spName + (includeReturnValueParameter ? ":include ReturnValue Parameter" : ""));
 			if (array == null)
 			{
